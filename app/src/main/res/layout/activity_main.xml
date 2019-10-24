@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:max="100"
+        android:progress="50"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25sp"/>
+    <Button
+        android:id="@+id/btn_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多线程计算，点击空白处取消"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btn_asynchronous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="异步任务计算，点击空白处取消"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btn_handler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Handler 下载图片"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btn_asyncTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AsyncTask 下载图片"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/btn_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="其它异步方式"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
