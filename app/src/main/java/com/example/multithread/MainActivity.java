@@ -75,6 +75,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 new DownloadImage(this).execute(DOWNLOAD_URLS);
                 break;
             case R.id.btn_type:
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        type.setText("runOnUiThread方式更新");
+                        textView.setText("runOnUiThread方式更新TextView的内容");
+                    }
+                });
+//                textView.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        type.setText("View.post方式更新");
+//                        textView.setText("View.post方式更新TextView的内容");
+//                    }
+//                });
+//                type.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        type.setText("View.postDelayed方式延时3秒更新");
+//                        textView.setText("View.postDelayed方式延时3秒更新TextView的内容");
+//                    }
+//                },3000);
                 break;
         }
     }
